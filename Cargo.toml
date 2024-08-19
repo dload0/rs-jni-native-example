@@ -1,0 +1,32 @@
+# Package setup.
+[package]
+name = "rs_jni_native_example"
+authors = ["dload0"]
+version = "0.1.0"
+edition = "2021"
+
+# Library setup.
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+# Release profile.
+[profile.release]
+panic = "abort"
+strip = true
+opt-level = "z"
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+incremental = false
+
+[dependencies]
+
+#
+# JNI.
+# * jni: For JNI bindings.
+#
+
+jni = { version = "0.21.1" }
