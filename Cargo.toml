@@ -27,6 +27,8 @@ incremental = false
 #
 # JNI.
 # * jni: For JNI bindings.
+# * simple_jvmti: For JVMTI bindings.
 #
 
 jni = { version = "0.21.1" }
+simple_jvmti = { version = "0.1.0" }
